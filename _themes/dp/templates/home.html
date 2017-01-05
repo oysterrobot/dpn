@@ -1,0 +1,165 @@
+<div id="home-list"> 
+
+<h1>Our Latest Episode</h1>
+
+<p class="explain">Here's the latest from the DP crew. For other episodes, check out <a href="/search">The Episode Archive.</a> You can also subscribe to the <a class="subscribe" href="http://technicaldifficulties.us/master-feed">Master Feed</a> and get episodes of both shows on your RSS reader or Podcatcher.</p>
+  <ul class="list image-list">
+            {{ entries:listing folder="episodes|dawn-patrol|seasons" limit="1" show_future="{ future }" }}
+              <li>
+                <a class="permalink" href="{{ url }}">
+                  {{ theme:partial src="transform" title="" file="{{ banner }}" }}
+                  {{ if show == "td" }}
+                      <h2 class="show-number"><span class="ticks">&minus;&nbsp;</span>TD {{ number }}<span class="ticks">&nbsp;&minus;</span></h2>
+                  {{ elseif show == "dp" }}   
+                      <h2 class="show-number"><span class="ticks">&minus;&nbsp;</span>DP {{ number }}<span class="ticks">&nbsp;&minus;</span></h2>
+                  {{ elseif show == "seasons" }}   
+                      <h2 class="show-number"><span class="ticks">&minus;&nbsp;</span>SO {{ number }}<span class="ticks">&nbsp;&minus;</span></h2>
+                  {{ endif }}   
+                  <div class="show-info">
+                    <h2 class="show-title"> {{ title }}</h2>
+                    <div class="show-date"> {{ datestamp format="F jS, Y" }}</div>
+                  </div>
+                  <p class="summary">{{ summary|markdown }}</p>
+                  {{ if type }}
+                    <p class="type">{{ type_list }}</p>
+                  {{ endif }}
+
+                  {{ if people }}
+                    <p class="people">{{ people_list }}</p>
+                  {{ endif }}
+                    
+                  {{ if topics }}
+                    <p class="topics">{{ topics_list }}</p>
+                  {{ endif }}
+                </a>
+              </li>
+            {{ /entries:listing }}
+  </ul>
+
+  <h1>Our Latest Articles</h1>
+  <p class="explain">We mostly talk, but occasionally we write too. For other articles, check out the alliterative <a href="/articles">Article Archive.</a> You can also subscribe to the <a class="subscribe" href="http://technicaldifficulties.us/articles-feed">Articles RSS Feed</a> and get all our articles sent straight to your RSS reader.</p>
+  <ul class="list article-list">
+            {{ entries:listing folder="articles" limit="1" show_future="{ future }" }}
+              <li>
+                <a class="permalink" href="{{ url }}">
+                  {{ theme:partial src="transform" title="" file="{{ banner }}" }}
+
+                  <div class="show-info">
+                    <h2 class="show-title"> {{ title }}</h2>
+                    <div class="show-date"> {{ datestamp format="F jS, Y" }}</div>
+                    <div class="article-author">By {{ people_sentence_list }}</div>
+                  </div>
+                  <p class="summary">{{ summary|markdown }}</p>
+                  <p class="more">Read more...</p>
+                  
+                  {{ if type }}
+                    <p class="type">{{ type_list }}</p>
+                  {{ endif }}
+
+                  {{ if people }}
+                    <p class="people">{{ people_list }}</p>
+                  {{ endif }}
+                    
+                  {{ if topics }}
+                    <p class="topics">{{ topics_list }}</p>
+                  {{ endif }}
+                </a>
+              </li>
+            {{ /entries:listing }}
+  </ul>
+
+  <h1>Seasons of Obsession</h1>
+  <p class="explain">Here are the most recent episodes of Seasons of Obsession. If you're looking for more you can find them <a href="/seasons">in the Seasons of Obsession Archive.</a> You can also subscribe to the <a class="subscribe" href="{{ seasons_subscribe }}">Seasons of Obsession Feed</a>.</p>
+  <ul class="list image-list">
+            {{ entries:listing folder="seasons" limit="4" show_future="{ future }" }}
+              <li>
+                <a class="permalink" href="{{ url }}">
+                  {{ theme:partial src="transform" title="" file="{{ banner }}" }}
+                  <h2 class="show-number"><span class="ticks">&minus;&nbsp;</span>{{ number }}<span class="ticks">&nbsp;&minus;</span></h2>
+         
+                  <div class="show-info">
+                    <h2 class="show-title"> {{ title }}</h2>
+                    <div class="show-date"> {{ datestamp format="F jS, Y" }}</div>
+                  </div>
+                  <p class="summary">{{ summary|markdown }}</p>
+                  {{ if type }}
+                    <p class="type">{{ type_list }}</p>
+                  {{ endif }}
+
+                  {{ if people }}
+                    <p class="people">{{ people_list }}</p>
+                  {{ endif }}
+                    
+                  {{ if topics }}
+                    <p class="topics">{{ topics_list }}</p>
+                  {{ endif }}
+                </a>
+              </li>
+            {{ /entries:listing }}
+  </ul>
+
+  <h1>Dawn Patrol</h1>
+  <p class="explain">Here are the most recent episodes of Dawn Patrol. If you're looking for more you can find them <a href="/dawn-patrol">in the Dawn Patrol Archive.</a> You can also subscribe to the <a class="subscribe" href="{{ dp_subscribe }}">Dawn Patrol Feed</a>.</p>
+  <ul class="list image-list">
+            {{ entries:listing folder="dawn-patrol" limit="4" show_future="{ future }" }}
+              <li>
+                <a class="permalink" href="{{ url }}">
+                  {{ theme:partial src="transform" title="" file="{{ banner }}" }}
+                  <h2 class="show-number"><span class="ticks">&minus;&nbsp;</span>{{ number }}<span class="ticks">&nbsp;&minus;</span></h2>
+         
+                  <div class="show-info">
+                    <h2 class="show-title"> {{ title }}</h2>
+                    <div class="show-date"> {{ datestamp format="F jS, Y" }}</div>
+                  </div>
+                  <p class="summary">{{ summary|markdown }}</p>
+                  {{ if type }}
+                    <p class="type">{{ type_list }}</p>
+                  {{ endif }}
+
+                  {{ if people }}
+                    <p class="people">{{ people_list }}</p>
+                  {{ endif }}
+                    
+                  {{ if topics }}
+                    <p class="topics">{{ topics_list }}</p>
+                  {{ endif }}
+                </a>
+              </li>
+            {{ /entries:listing }}
+  </ul>
+
+  <h1>Technical Difficulties</h1>
+  <p class="explain">Here are the most recent episodes of Technical Difficulties. If you're looking for more you can find them <a href="/episodes">in the Technical Difficulties Archive.</a> You can also subscribe to the <a class="subscribe" href="{{ subscribe_link }}">Technical Difficulties Feed</a>.</p>
+  <ul class="list image-list">
+            {{ entries:listing folder="episodes" limit="4" show_future="{ future }" }}
+              <li>
+                <a class="permalink" href="{{ url }}">
+                  {{ theme:partial src="transform" title="" file="{{ banner }}" }}
+                  <h2 class="show-number"><span class="ticks">&minus;&nbsp;</span>{{ number }}<span class="ticks">&nbsp;&minus;</span></h2>
+         
+                  <div class="show-info">
+                    <h2 class="show-title"> {{ title }}</h2>
+                    <div class="show-date"> {{ datestamp format="F jS, Y" }}</div>
+                  </div>
+                  <p class="summary">{{ summary|markdown }}</p>
+                  {{ if type }}
+                    <p class="type">{{ type_list }}</p>
+                  {{ endif }}
+
+                  {{ if people }}
+                    <p class="people">{{ people_list }}</p>
+                  {{ endif }}
+                    
+                  {{ if topics }}
+                    <p class="topics">{{ topics_list }}</p>
+                  {{ endif }}
+                </a>
+              </li>
+            {{ /entries:listing }}
+  </ul>
+
+
+  <p class="explain">Looking for even more? Check out <a href="/search">The Episode Archive</a> or subscribe to the <a class="subscribe" href="http://technicaldifficulties.us/master-feed">Master Feed</a> to get all our latest episodes as soon as they're released.</p>
+
+  <p class="explain">Thanks for listening!</p>
+</div>

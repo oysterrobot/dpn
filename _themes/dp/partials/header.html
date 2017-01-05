@@ -1,0 +1,36 @@
+<div class="logo">
+	<a href="{{ homepage }}">
+	{{ if show == 'td' or current_url == '/episodes' }}
+		<img src="{{ theme:img src='td-white.svg' }}" alt="logo">
+	{{ elseif show == 'dp' or current_url == '/dawn-patrol' }}
+		<img src="{{ theme:img src='dp-white.svg' }}" alt="logo">
+  {{ elseif show == 'heretics' or current_url == '/heretics' }}
+		<img src="{{ theme:img src='heretics-white.svg' }}" alt="logo">
+  {{ elseif show == 'seasons' or current_url == '/seasons' }}
+		<img src="{{ theme:img src='seasons-white.svg' }}" alt="logo">
+	{{ else }}
+    	<img src="{{ theme:img src='dpn-white.svg' }}" alt="logo">
+    {{ endif }}
+  </a>
+</div>
+
+<h1>Technical Difficulties</h1>
+
+{{ if show == 'td' or current_url == '/episodes' }}
+	<h2 class="td">Like a normal tech podcast, but&nbsp;broken.</h2>
+{{ elseif show == 'dp' or current_url == '/dawn-patrol' }}
+	<h2 class="dp">Unscripted. Unedited. Uncaffeinated.</h2>
+{{ elseif show == 'heretics' or current_url == '/heretics' }}
+	<h2 class="heretics">Every walled garden has a gate.</h2>
+{{ elseif show == 'seasons' or current_url == '/seasons' }}
+	<h2 class="seasons">...and a time to every purpose under heaven.</h2>
+{{ else }}
+	<h2>Like a normal podcast network, but&nbsp;difficult.</h2>
+{{ endif }}
+
+
+<form class="search" action="/search" method="get">
+
+  <input class="search" placeholder="Search Episodes and Notes" type="text" name="query" value="{{ get:query|sanitize }}">
+
+</form>

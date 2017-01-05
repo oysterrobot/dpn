@@ -1,0 +1,96 @@
+<div class="pagination top">
+  {{ if prev }}
+      <a class="previous" href="{{ prev }}"><span class="arrows">&laquo;</span> Newer</a>
+  {{ else }}
+      <div class="filler">&nbsp;</div>
+  {{ endif }}
+  {{ if show == "dp" }}
+      <a class="search" href="/dawn-patrol">Episodes</a>
+  {{ elseif show == "heretics" }}
+      <a class="search" href="/heretics">Episodes</a>
+  {{ elseif show == "seasons" }}
+      <a class="search" href="/seasons">Episodes</a>
+  {{ else }}
+      <a class="search" href="/episodes">Episodes</a>
+  {{ endif}}
+
+  {{ if next }}
+      <a class="next" href="{{ next }}">Older <span class="arrows">&raquo;</span></a>
+  {{ endif }}
+</div>
+
+ {{ if showtype == "article" }}
+ <div class="article {{ show }}">
+ {{ else }}
+ <div class="show {{ show }}">
+ {{ endif }}
+
+    <div class="show-header">
+      <a class="permalink" href="{{ url }}">
+        <h2 class="show-number">&minus;&nbsp;{{ number }}&nbsp;&minus;</h2>
+        <h2 class="show-title">{{ title|widont }}</h2>
+      </a>
+      <p class="show-date"> {{ datestamp format="F jS, Y" }}</p>
+
+      <p class="listen-links"><a href="{{ download }}" title="Technical Difficulties {{ number }} - {{ title }}">Download</a> <span class="divider">::</span> <a id="huffduffer">Huffduff it</a> <span class="divider2">::</span><span class="break"><br/></span> {{ if show == "td" }}<a class="subscribe" href="{{ subscribe_link }}">Subscribe</a>{{ elseif show == "dp" }}<a class="subscribe" href="{{ dp_subscribe }}">Subscribe</a>{{ elseif show == "heretics" }}<a class="subscribe" href="{{ heretics_subscribe }}">Subscribe</a>{{ elseif show == "seasons" }}<a class="subscribe" href="{{ seasons_subscribe }}">Subscribe</a>{{ endif }}</p>
+
+      {{ if showtype == "article" }}
+          <div class="article-author">By {{ people_sentence_list }}</div>
+      {{ endif }}
+    </div>
+
+    {{ if banner }}
+      <img class="show-banner" src="{{ path src='{{ banner }}' }}" />
+    {{ else }}
+      <img class="show-banner" src="{{ path src='assets/img/plane-wreck.jpg' }}" />
+    {{ endif }}
+
+    {{ if caption }}
+      <div class="caption">
+        {{ caption|markdown }}
+      </div>
+    {{ endif }}
+
+    <div class="show-notes">
+      {{ summary|markdown }}
+      {{ player }}
+      {{ content }}
+    </div>
+
+    <div class="show-meta">
+
+      {{ if people }}
+      <h3>People:</h3>
+      <p class="people">{{ people_url_list }}</p>
+      {{ endif }}
+      
+      {{ if topics }}
+      <h3>Topics:</h3>
+      <p class="topics">{{ topics_url_list }}</p>
+      {{ endif }}
+    </div>
+
+  </div>
+
+  <div class="pagination bottom">
+    {{ if prev }}
+        <a class="previous" href="{{ prev }}"><span class="arrows">&laquo;</span> Newer</a>
+    {{ else }}
+        <div class="filler">&nbsp;</div>
+    {{ endif }}
+
+   
+    {{ if show == "dp" }}
+        <a class="search" href="/dawn-patrol">Episodes</a>
+    {{ elseif show == "seasons" }}
+      <a class="search" href="/seasons">Episodes</a>
+    {{ elseif show == "heretics" }}
+        <a class="search" href="/heretics">Episodes</a>
+    {{ else }}
+        <a class="search" href="/episodes">Episodes</a>
+    {{ endif}}
+
+    {{ if next }}
+        <a class="next" href="{{ next }}">Older <span class="arrows">&raquo;</span></a>
+    {{ endif }}
+  </div>

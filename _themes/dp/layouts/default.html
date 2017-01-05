@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ if show == 'dp' or current_url == '/dawn-patrol' }}TD Dawn Patrol{{ elseif show == 'heretics' or current_url == '/heretics' }}Heretics{{ else }}{{ _site_name }}{{ endif}}{{ if number }} - {{ number }}{{ endif }} - {{ title }}</title>
+  <meta name = "viewport" content = "initial-scale = 1.0">
+  <meta name="description" content="{{ if summary }}{{ summary }}{{ endif }}">
+  <meta name="keywords" content="{{ if topics }}{{ topics_list }}{{ endif }}">
+  <link rel="stylesheet" href="{{ theme:css }}" />
+  <link rel="stylesheet" href="{{ theme:css src="jquery.fancybox.css"}}" type="text/css" media="screen" />
+  <link rel="icon" type="image/png" href="{{ theme:img src="favicon.png" }}" />
+  <link rel="alternate" type="application/rss+xml" href="{{ _site_url }}feed" title="Technical Difficulties" />
+  <script type="text/javascript" src="//use.typekit.net/xls7rmv.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ theme:js src="jquery.fancybox.pack.js"}}"></script>
+  <script type="text/javascript" src="{{ theme:js src="td"}}"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+<body class="{{ if show == 'dp' or current_url == '/dawn-patrol' }}dp{{ elseif  show == 'seasons' or current_url == '/seasons' }}seasons{{ elseif  show == 'heretics' or current_url == '/heretics' }}heretics{{ endif }}">
+  <div class="background"></div>
+  <div class="container">
+    <div class="nav">
+      {{ theme:partial src="nav" }}
+    </div>
+    <div class="header">
+      {{ theme:partial src="header" }}
+    </div>
+    <div class="content">
+        {{ layout_content }}
+    </div>
+    <div class="footer">
+      {{ theme:partial src="footer" }}
+    </div>
+  </div>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-45791788-1', 'technicaldifficulties.us');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>

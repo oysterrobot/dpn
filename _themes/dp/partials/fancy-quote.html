@@ -1,0 +1,108 @@
+{{ if person == "erik" }}
+<table class="fancy-quote erik">
+  <tr>
+    <td class="avatar">
+      <img src="{{ _site_url }}assets/img/erik-avatar.png" />
+    </td>
+    <td class="quote"><a href="https://soundcloud.com/techdiffpodcast/{{ url }}#t={{ time }}">&ldquo;{{ quote|widont|smartypants }}&rdquo;</a></td>
+  </tr>
+</table>
+{{ elseif person == "gabe" }}
+<table class="fancy-quote gabe">
+  <tr>
+   {{ if side == "right" }}
+    <td class="quote right"><a href="https://soundcloud.com/techdiffpodcast/{{ url }}#t={{ time }}">&ldquo;{{ quote|widont|smartypants }}&rdquo;</a></td>
+    <td class="avatar">
+      <img src="{{ _site_url }}assets/img/gabe-avatar.png" />
+    </td>
+   {{ else }}
+    <td class="avatar">
+      <img src="{{ _site_url }}assets/img/gabe-avatar.png" />
+    </td>
+    <td class="quote"><a href="https://soundcloud.com/techdiffpodcast/{{ url }}#t={{ time }}">&ldquo;{{ quote|widont|smartypants }}&rdquo;</a></td>
+   {{ endif }}
+  </tr>
+</table>
+{{ elseif person == "potatowire" }}
+<table class="fancy-quote potatowire">
+  <tr>
+    <td class="avatar">
+      <img src="{{ _site_url }}assets/img/potatowire-avatar.png" />
+    </td>
+    <td class="quote"><a href="https://soundcloud.com/techdiffpodcast/{{ url }}#t={{ time }}">&ldquo;{{ quote|widont|smartypants }}&rdquo;</a></td>
+  </tr>
+</table>
+{{ elseif person == "macsparky" }}
+<table class="fancy-quote macsparky">
+  <tr>
+    <td class="avatar">
+      <img src="{{ _site_url }}assets/img/macsparky-avatar.png" />
+    </td>
+    <td class="quote"><a href="https://soundcloud.com/techdiffpodcast/{{ url }}#t={{ time }}">&ldquo;{{ quote|widont|smartypants }}&rdquo;</a></td>
+  </tr>
+</table>
+{{ elseif person == "merlin" }}
+<table class="fancy-quote merlin">
+  <tr>
+    <td class="avatar">
+      <img src="{{ _site_url }}assets/img/merlin-avatar.png" />
+    </td>
+    <td class="quote"><a href="https://soundcloud.com/techdiffpodcast/{{ url }}#t={{ time }}">&ldquo;{{ quote|widont|smartypants }}&rdquo;</a></td>
+  </tr>
+</table>
+{{ elseif person == "bradley" }}
+<table class="fancy-quote bradley">
+  <tr>
+    <td class="avatar">
+      <img src="{{ _site_url }}assets/img/bradley-avatar.png" />
+    </td>
+    <td class="quote"><a href="https://soundcloud.com/techdiffpodcast/{{ url }}#t={{ time }}">&ldquo;{{ quote|widont|smartypants }}&rdquo;</a></td>
+  </tr>
+</table>
+{{ elseif person == "bob" }}
+<table class="fancy-quote bob">
+  <tr>
+    <td class="avatar">
+      <img src="{{ _site_url }}assets/img/bob-avatar.jpg" />
+    </td>
+    <td class="quote"><a href="https://soundcloud.com/techdiffpodcast/{{ url }}#t={{ time }}">&ldquo;{{ quote|widont|smartypants }}&rdquo;</a></td>
+  </tr>
+</table>
+
+{{ elseif person == "mailmate" }}
+<table class="fancy-quote mailmate">
+  <tr>
+    <td class="avatar">
+      <img src="{{ _site_url }}assets/img/mailmate-avatar.png" />
+    </td>
+    <td class="quote"><a href="https://soundcloud.com/techdiffpodcast/{{ url }}#t={{ time }}">&ldquo;{{ quote|widont|smartypants }}&rdquo;</a></td>
+  </tr>
+</table>
+{{ elseif person == "helene" }}
+<table class="fancy-quote helene">
+  <tr>
+    <td class="avatar">
+      <img src="{{ _site_url }}assets/img/helene-avatar.png" />
+    </td>
+    <td class="quote"><a href="https://soundcloud.com/techdiffpodcast/{{ url }}#t={{ time }}">&ldquo;{{ quote|widont|smartypants }}&rdquo;</a></td>
+  </tr>
+</table>
+{{ elseif person == "drang" }}
+<table class="fancy-quote drang">
+  <tr>
+    <td class="avatar">
+      <img src="{{ _site_url }}assets/img/drang-avatar.png" />
+    </td>
+    <td class="quote"><a href="https://soundcloud.com/techdiffpodcast/{{ url }}#t={{ time }}">&ldquo;{{ quote|widont|smartypants }}&rdquo;</a></td>
+  </tr>
+</table>
+{{ elseif person == "zpq" }}
+<table class="fancy-quote zpq">
+  <tr>
+    <td class="avatar">
+      <img src="{{ _site_url }}assets/img/zpq-avatar.png" />
+    </td>
+    <td class="quote"><a href="{{ url }}">&ldquo;{{ quote|widont|smartypants }}&rdquo;</a></td>
+  </tr>
+</table>
+{{ endif }}
