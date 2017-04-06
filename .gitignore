@@ -1,13 +1,11 @@
 .DS_Store
 .Spotlight-V100
 .Trashes
-/_config/environments/*
 /_cache/*
 /.sass-cache/*
 .htaccess
 /_config/users/*
 !/_config/users/index.html
-/_config/settings.yaml
 /_content/4-potatoschmidt
 /_content/4-potatoschmidt/*
 robots.txt

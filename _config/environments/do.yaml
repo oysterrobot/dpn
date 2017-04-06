@@ -1,0 +1,14 @@
+###########################################################################################
+#
+#  DEV ENVIRONMENT VARIABLES
+#
+###########################################################################################
+
+# Just an example use case
+# enable_analytics: no
+
+# Enter your license key
+_license_key: 02a5e652-eed2-499c-9368-509f46d4b527
+
+# Used for permalinks
+_site_url: http://akimbokimono.com:8888/
